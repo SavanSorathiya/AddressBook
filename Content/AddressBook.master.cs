@@ -9,6 +9,7 @@ public partial class Content_AddressBookMasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        //Implemented git
         if(!IsPostBack)
         {
             if (Session["UserID"] == null)
