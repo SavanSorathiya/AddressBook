@@ -1,0 +1,17 @@
+﻿body{
+
+}
+
+.navbar_backgroungcolor{
+    background-color:#284f6b;
+    padding:10px;
+}
+
+.navbar_textcolor{
+    color:white;
+}
+
+.footer_backgroungcolor {
+    background-color: #284f6b;
+    padding: 10px;
+}

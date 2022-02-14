@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AddressBook.master.cs" Inherits="Content_AddressBookMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Content/css/MyCSS.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="~/Content/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <link href="~/Content/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container-fluid">
+
+        <div class="row  navbar_backgroungcolor sticky-top navbar_textcolor ">
+            <div class="col-md-1">
+                <h3 class="navbar_textcolor">MultiUserAddressBook</h3>
+
+            </div>
+            <div class="col-md-9">
+                    <nav>
+                        <ul class="nav nav-pills justify-content-center">
+                          <li class="nav-item">
+                              <asp:HyperLink ID="hlHome" class="nav-link" runat="server" NavigateUrl="~/AdminPanel/Default.aspx">Home</asp:HyperLink>
+                          </li>
+                          <li class="nav-item">
+                              <asp:HyperLink ID="hlContact" class="nav-link" runat="server" NavigateUrl="~/AdminPanel/Contact/ContactList.aspx">Contact</asp:HyperLink>
+                          </li>
+                          <li class="nav-item">
+                              <asp:HyperLink ID="hlContactCategory" class="nav-link" runat="server" NavigateUrl="~/AdminPanel/ContactCategory/ContactCategoryList.aspx">Contact Category</asp:HyperLink>
+                          </li>
+                          <li class="nav-item">
+                              <asp:HyperLink ID="hlCity" class="nav-link" runat="server" NavigateUrl="~/AdminPanel/City/CityList.aspx">City</asp:HyperLink>
+                          </li>
+                          <li class="nav-item">
+                              <asp:HyperLink ID="hlState" class="nav-link" runat="server" NavigateUrl="~/AdminPanel/State/StateList.aspx">State</asp:HyperLink>
+                          </li>
+                          <li class="nav-item">
+                              <asp:HyperLink ID="hlCountry" class="nav-link" runat="server" NavigateUrl="~/AdminPanel/Country/CountryList.aspx">Country</asp:HyperLink>
+                          </li>
+                        </ul>
+                    </nav>
+            </div>
+            <div class=" col-md-1 text-end">
+                 <asp:Label ID="lblUserName" runat="server"></asp:Label>
+           </div>
+            <div class=" col-md-1 text-end">
+                <asp:LinkButton ID="lbLogout" runat="server" CssClass="btn btn-sm btn-danger" OnClick="lbLogout_Click" CausesValidation="False">Logout</asp:LinkButton>
+           </div>
+                 
+            
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+               <asp:ContentPlaceHolder id="cphMainContent" runat="server">
+               </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <div class="row footer_backgroungcolor">
+            <div class="col-md-12 text-center navbar_textcolor">
+               <div>
+                   <hr />
+                   &copy;&nbsp;Prepared By : Savan A. Sorathiya(190540107200)<br />190540107200@darshan.ac.in&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Darshan Institute Of Engineering And Technology
+               </div>
+            </div>
+        </div>
+        
+    </div>
+    </form>
+   
+  
+
+</body>
+</html>
