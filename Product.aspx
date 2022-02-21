@@ -24,7 +24,7 @@
                 <ItemTemplate>
                  <div class="col-md-4">
                      <div>
-                        <asp:Image ID="imgProduct" runat="server" CssClass="img-fluid" ImageUrl='<%# Eval("PhotoPath") %>' AlternateText='<%#Eval("ProductName") %>' ToolTip='<%#Eval("ProductName") %>' />
+                        <asp:Image ID="imgProduct" runat="server" CssClass="img-fluid" Height="300px" Width="1000px" ImageUrl='<%# Eval("PhotoPath") %>' AlternateText='<%#Eval("ProductName") %>' ToolTip='<%#Eval("ProductName") %>' />
                      </div>
                      <div class="text-center fw-bold p-3">
                          <%#Eval("ProductName") %>

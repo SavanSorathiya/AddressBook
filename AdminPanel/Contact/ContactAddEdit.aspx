@@ -3,8 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMainContent" Runat="Server">
-
-    <div class="row">
+    <div class="col-md-12">
+        <div class="row">
+        
             <div class="col-md-12">
                 <h1><asp:Label ID="lblHead" runat="server"></asp:Label></h1>
                 
@@ -13,7 +14,10 @@
                 </p>
                 <p>&nbsp;</p>
             </div>
-        </div>    
+        </div>   
+        <div class="row">
+    <div class="col-md-9">
+         
         <div class="form-group row">
             <label for="txtContactName" class="col-md-2 col-form-label">Contact Name:</label>
                 <div class="col-md-10">
@@ -34,8 +38,8 @@
              <label for="ddlContactCategory" class="col-md-2 col-form-label">Contact Category:</label>
                 <div class="col-md-4">
                     <asp:DropDownList ID="ddlContactCategory" runat="server" CssClass="form-control"></asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="rfvContactCategory" runat="server" ErrorMessage="Select Contact Category" ControlToValidate="ddlContactCategory" Display="Dynamic" ForeColor="#CC0000" SetFocusOnError="True" InitialValue="-1"></asp:RequiredFieldValidator>
-                </div>
+                   <%-- <asp:RequiredFieldValidator ID="rfvContactCategory" runat="server" ErrorMessage="Select Contact Category" ControlToValidate="ddlContactCategory" Display="Dynamic" ForeColor="#CC0000" SetFocusOnError="True" InitialValue="-1"></asp:RequiredFieldValidator>
+                --%></div>
          </div>
 
       <br />
@@ -97,9 +101,20 @@
                </div>
          </div>
 
-       
-
-
+       </div>
+      <div class="col-md-3 newContactCategory_backcolor">
+            <div class="text-center">
+                <label for="cblContactCategory"><h3>Contact Category:</h3></label>
+                <asp:Label ID="lblCheckList" runat="server"></asp:Label>
+            </div>
+            <hr />
+            <div class="row newContactCategory ">
+            <asp:CheckBoxList ID="cblContactCategory" runat="server"> </asp:CheckBoxList>
+            </div>
+        
+        </div>
+        </div>
+        </div>
 
     <br />
              <asp:Button ID="btnAdd" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnAdd_Click"/>

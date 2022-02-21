@@ -26,11 +26,12 @@
                                 <asp:Button ID="btnDelete" runat="server" Text="Delete"  CssClass="btn btn-sm btn-danger" CommandName="DeleteRecord" CommandArgument='<%# Eval("ContactID") %>'/>
                             </ItemTemplate>
                         </asp:TemplateField>
+                 
                         <asp:BoundField DataField="ContactID" HeaderText="Contact ID"/>
-                        <asp:BoundField DataField="ContactCategoryID" HeaderText="Contact Category ID"/>
+                    <%--    <asp:BoundField DataField="ContactCategoryID" HeaderText="Contact Category ID"/>
                         <asp:BoundField DataField="CityID" HeaderText="City ID"/>
                         <asp:BoundField DataField="StateID" HeaderText="State ID"/>
-                        <asp:BoundField DataField="CountryID" HeaderText="Country ID"/>
+                        <asp:BoundField DataField="CountryID" HeaderText="Country ID"/>--%>
                         <asp:BoundField DataField="ContactName" HeaderText="Contact Name"/>    
                         <asp:BoundField DataField="ContactCategoryName" HeaderText="Contact Category Name"/>
                         <asp:BoundField DataField="Address" HeaderText="Address"/>
